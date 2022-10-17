@@ -1,21 +1,17 @@
 let ccounter=0;
 let ucounter=0;
 const choices=["rock","paper","scissor"];
-let userChoice;
-let computerChoice;
-function getChoices(){
-computerChoice=choices[getComputerChoice(choices)];
-userChoice=prompt("enter your choice ").toLowerCase();
-}
+
+
 function getComputerChoice(choice)  
     {return Math.floor(Math.random()*choice.length);
 
 }
-console.log(computerChoice);
-console.log(userChoice);
+
 
  function playRound(playerSelection,computerSelection)
  {
+    
     if(computerSelection=="rock"&&playerSelection=="scissor")
     {ccounter++;
     return (`You lose !! ${computerSelection} beats ${playerSelection}`);
@@ -42,13 +38,23 @@ console.log(userChoice);
 }
 
 function game()
-{   getChoices();
+{   setInterval(function(){
+      let userChoice=prompt("enter your choice ").toLowerCase();
+    let computerChoice=choices[getComputerChoice(choices)];
+    console.log(computerChoice);
+    console.log(userChoice);
     const result=playRound(userChoice,computerChoice);
     console.log(result);
     console.log(ccounter);
-console.log(ucounter);
+    console.log(ucounter);
 
+},5000);
 }
 
 for (let i=1;i<=5;i++)
+{ let play=prompt("Do you want to play?").toLowerCase();
+if(play==="yes")
 game();
+else if(play==="no")
+break;
+}
