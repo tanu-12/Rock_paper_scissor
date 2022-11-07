@@ -68,12 +68,12 @@ function playRound(playerSelection, computerSelection) {
 
 
 }*/
-let buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll('.option');
 
 for (let i = 0; i < buttons.length; i++)
 
     buttons[i].addEventListener('click', function (e) {
         playRound(e.target.value, choices[getComputerChoice(choices)])
     });
-let div = document.querySelector('div');
+let div = document.querySelector('.result');
 
