@@ -47,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
             finalResult.textContent = `You win`;
         ccounter = 0;
         ucounter = 0;
-        document.body.appendChild(finalResult);
+        div.appendChild(finalResult);
 
     }
 
