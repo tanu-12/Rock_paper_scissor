@@ -7,6 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
 
 }
 
@@ -21,18 +22,38 @@ body {
 
 .user_op {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 52px;
+
 
 
 }
 
 img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+
 }
 
-div {
-    max-width: 200px;
+.cards {
+    width: 100px;
+
+
+
+
+}
+
+button {
+    box-shadow: 5px 5px 0 #000;
+    transition: translate box-shadow color .25s;
+    font-size: medium;
+    border-radius: 8px;
+    padding: 5px;
+
+
+}
+
+button:hover {
+    box-shadow: none;
+    color: #000;
+    translate: 5px 5px;
 }

@@ -14,29 +14,29 @@ function playRound(playerSelection, computerSelection) {
     if (computerSelection == "rock" && playerSelection == "scissor") {
         ccounter++;
         div.textContent = `You lose !! ${computerSelection} beats ${playerSelection} `;
-        div.textContent += `You:${ucounter} Computer:${ccounter}`
+        score.textContent = `You:${ucounter} Computer:${ccounter}`
 
     }
     else if (computerSelection == "scissor" && playerSelection == "paper") {
         ccounter++;
         div.textContent = `You lose !! ${computerSelection} beats ${playerSelection} `;
-        div.textContent += `You:${ucounter} Computer:${ccounter}`
+        score.textContent = `You:${ucounter} Computer:${ccounter}`
 
     }
     else if (computerSelection == "paper" && playerSelection == "rock") {
         ccounter++;
         div.textContent = `You lose !! ${computerSelection} beats ${playerSelection} `;
-        div.textContent += `You:${ucounter} Computer:${ccounter}`
+        score.textContent = `You:${ucounter} Computer:${ccounter}`
 
     }
     else if (computerSelection === playerSelection) {
         div.textContent = `Its a tie `;
-        div.textContent += `You:${ucounter} Computer:${ccounter}`
+        score.textContent = `You:${ucounter} Computer:${ccounter}`
     }
     else {
         ucounter++;
         div.textContent = `You win !! ${playerSelection} beats ${computerSelection} `;
-        div.textContent += `You:${ucounter} Computer:${ccounter}`
+        score.textContent = `You:${ucounter} Computer:${ccounter}`
 
     }
     if (ccounter === 5 || ucounter === 5) {
@@ -47,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
             finalResult.textContent = `You win`;
         ccounter = 0;
         ucounter = 0;
-        div.appendChild(finalResult);
+        score.appendChild(finalResult);
 
     }
 
@@ -76,4 +76,5 @@ for (let i = 0; i < buttons.length; i++)
         playRound(e.target.value, choices[getComputerChoice(choices)])
     });
 let div = document.querySelector('.result');
+let score = document.querySelector('.score');
 
