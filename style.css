@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     margin: 0;
-    background: url(/images/thefloorisjelly.jpeg) no-repeat;
+    background: url(images/thefloorisjelly.jpeg) no-repeat;
     background-size: cover;
     text-align: center;
     display: flex;
